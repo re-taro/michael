@@ -62,7 +62,7 @@ jobs:
     continue-on-error: true
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v3.6.0
       - name: Setup | Rust
         uses: dtolnay/rust-toolchain@stable
         with:
@@ -114,7 +114,7 @@ jobs:
     if: ${{ needs.release_please.outputs.release_created == 'true' }}
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v3.6.0
       - name: Setup | Rust
         uses: dtolnay/rust-toolchain@stable
       - name: Build | Publish
